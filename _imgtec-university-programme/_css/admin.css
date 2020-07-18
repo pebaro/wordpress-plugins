@@ -1,0 +1,44 @@
+#wpfooter p span#iup-admin-footer-text {
+	color: #006e79 !important;
+	font-weight: 700 !important;
+}
+#wpfooter p span#iup-admin-footer-version-no {
+	color: #006e79 !important;
+	font-weight: 700 !important;
+}
+#wpfooter p span {
+    color: #006e79 !important;
+    font-weight: 700 !important;
+}
+div#wpfooter {
+    color: #006e79 !important;
+    font-weight: 700 !important;
+}
+#footer-thankyou {
+	display: none !important;
+}
+#adminmenu #toplevel_page__imgtec-university-programme-_admin-iup-admin a,
+#adminmenu #toplevel_page__imgtec-university-programme-_admin-iup-admin a:visited {
+    color: #62f314 !important;
+}
+li#toplevel_page__imgtec-university-programme-_admin-iup-admin li a {
+    color: #62f314 !important;
+}
+li#wp-admin-bar-iup_admin_menu_bar a {
+    color: #62f314 !important;
+}
+/* 
+    hide duplicate headings 
+*/
+#toplevel_page__imgtec-university-programme-_admin-iup-admin a.wp-first-item.current,
+#toplevel_page__imgtec-university-programme-_admin-iup-admin .wp-first-item {
+    display: none !important;
+}
+#iup-custom-admin {
+    padding-top: 30px;
+}
+#iup-custom-admin .iupdm-cpt-listing {
+    margin: 20px 0 30px 0px;
+    border-top: 1px solid #ccc;
+    padding-top: 0;
+}
