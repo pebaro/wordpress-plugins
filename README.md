@@ -13,6 +13,9 @@
 #     This plugin consolidates all of the custom data produced for the imgtec theme
 #     Included are all of the custom post types and custom taxonomies, custom widgets and custom admin to manage everything from one place
 #     I also included a custom menu system which reduces the number of listings in the left-hand column making everything neat and concise
+#     Also included is an extra feature that was added later enabling the user to request our press kit
+#     Requests for the press kit would be sent via email to the admin who could then approve or deny the request
+#     All press kit request are handled in their own custom admin panel
 
 # 3 - _imgtec-live-search
 #     This plugin uses the WP Rest API to search through all of the website data across all custom post types and standard posts and pages
