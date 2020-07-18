@@ -1,0 +1,79 @@
+.iupdm-single-download-image {
+	max-width: 150px !important;
+}
+
+.iupdm-display-none {
+	display: none !important;
+}
+
+/* containers */
+.iupdm-rf-question-container {
+	display: block;
+	padding: 0 0 25px;
+	border-bottom: 1px solid rgba( 0, 0, 0, 0.1 );
+}
+
+
+/* labels */
+.iupdm-rf-label {
+	cursor: pointer;
+	margin: 20px 0 4px;
+}
+.iupdm-rf-radio-label {
+	cursor: pointer;
+	padding: 0;
+	margin-right: 50px;
+}
+
+.iupdm-rf-question {
+    margin: 20px 0 4px;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+.iupdm-rf-guidance-note {
+    display: block;
+    clear: both;
+    color: #6d3200;
+    font-size: 80%;
+    font-weight: 700;
+    margin-top: 0px !important;
+}
+
+
+/* input fields */
+.iupdm-rf-input {
+	width: 50% !important;
+	margin-bottom: 0 !important;
+}
+.iupdm-rf-number-input {
+	width: 25% !important;
+	display: block;
+	margin-bottom: 0 !important;
+}
+.iupdm-rf-textarea {
+	width: 50%;
+	margin-bottom: -5px !important;
+}
+
+/* select fields */
+.iupdm-rf-select-group .iupdm-rf-select {
+	display: inline-block;
+	width: 25%;
+	margin-bottom: 0 !important;
+}
+.iupdm-rf-select {
+	margin: 0;
+	width: 50%;
+	margin-bottom: 0 !important;
+}
+
+
+/* radio buttons */
+.iupdm-rf-radio-group .iupdm-rf-radio {
+    display: inline-block;
+}
+.iupdm-rf-radio {
+	cursor: pointer;
+	margin: 0 10px;
+	padding: 0;
+}

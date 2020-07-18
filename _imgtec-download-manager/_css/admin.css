@@ -1,0 +1,456 @@
+#adminmenu #toplevel_page__imgtec-download-manager-_admin-download-manager-admin a,
+#adminmenu #toplevel_page__imgtec-download-manager-_admin-download-manager-admin a:visited {
+	color: #00ffff !important;
+}
+#adminmenu #toplevel_page__imgtec-download-manager-_admin-download-manager-admin a:active,
+#adminmenu #toplevel_page__imgtec-download-manager-_admin-download-manager-admin a:focus
+ {
+	color: #fff !important;
+}
+li#wp-admin-bar-iupdm_admin_menu_bar a {
+    color: #00ffff !important;
+}
+#adminmenu .wp-menu-image img {
+    padding: 5px 0 0 0;
+    opacity: .6;
+    width: 25px;
+    filter: alpha(opacity=60);
+}
+.iupdm-admin-heading {
+    color: #005658;
+    font-size: 200%;
+    padding: 0 0 20px;
+    margin: 0;
+}
+.iupdm-version-number {
+    float: right;
+    font-size: 60%;
+    font-weight: 400;
+    color: #888888;
+    border-top: 1px solid #888;
+    border-bottom: 1px solid #888;
+    padding-left: 10px;
+    padding-bottom: 3px;
+}
+/* 
+    hide duplicate headings 
+*/
+#toplevel_page__imgtec-download-manager-_admin-download-manager-admin a.wp-first-item.current,
+#toplevel_page__imgtec-download-manager-_admin-download-manager-admin .wp-first-item {
+    display: none !important;
+}
+
+
+/* ======================== */
+/* ===== CPT LISTINGS ===== */
+/* ------------------------ */
+.iupdm-cpt-listing {
+	margin: 60px 0 30px 60px;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+}
+.iupdm-cpt-listing:first-child {
+    margin-top: 0 !important;
+    border-top: none;
+    padding-top: 30px;
+}
+.iupdm-cpt-listing:last-child {
+    padding-bottom: 50px;
+    margin-bottom: -10px;
+}
+.iupdm-options a {
+	background: #005677;
+	border: 1px solid #005677;
+	color: #FFF;
+    padding: 5px 10px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+.iupdm-options a:hover {
+	background: #585858;
+	border: 1px solid #585858;
+}
+.iupdm-options a:last-child {
+    background: #019ec1;
+    color: #FFF;
+    border: 1px solid #019ec1;
+    padding: 5px 10px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+.iupdm-options a:last-child:hover {
+    background: #151515;
+    border: 1px solid #151515;
+}
+.none-applied {
+    margin: 0;
+    color: #009fb9;
+}
+.iupdm-taxonomies h4 {
+    margin-top: 40px;
+}
+.iupdm-taxonomies a {
+	border: 1px solid #555;
+    color: #555;
+    text-decoration: none;
+    padding: 5px 10px;
+    margin-right: 10px;
+    background: #FFF;
+}
+.iupdm-taxonomies a:hover {
+	border: 1px solid #555;
+	background: #555;
+	color: #FFF;
+}
+.iupdm-green-menu-item { color: #b1ff6d !important; }
+.iupdm-green-menu-item-small { color: #b1ff6d; border-top: 1px solid #555; border-bottom: 1px solid #555; padding-top: 5px !important; padding-bottom: 5px !important; font-size: .7rem !important; }
+
+
+/* ============================= */
+/* ===== STATS / REPORTING ===== */
+/* ----------------------------- */
+.iupdm-green { color: #005312; font-weight: bold !important; }
+.iupdm-blue { color: #003757; font-weight: bold !important; }
+.iupdm-red { color: #690000; font-weight: bold !important; }
+.iupdm-orange { color: #794800; font-weight: bold !important; }
+.iupdm-grey { color: #464646; font-weight: bold !important; }
+/* .iupdm-stats-item strong { color: #000 !important; } */
+
+.iupdm-stats-item {
+    display: inline-block;
+    width: 450px;
+    padding: 20px 20px 40px;
+    margin: 60px 0 60px 60px;
+    border: 1px solid #b3b3b3;
+    border-top: 12px solid #005658;
+    border-bottom: 4px solid #b3b3b3;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+.iupdm-stats-item h4 {
+	font-size: 1.2rem;
+	font-weight: 700; 
+	color: #005658;
+	/* padding-left: 10px; */
+}
+.iupdm-stats-item strong {
+    font-weight: 700;
+    color: #005658;
+	margin-right: 5px;
+	margin-left: 10px;
+}
+.iupdm-stats-item hr {
+	border: 1px solid #005658;
+	margin: 10px 0;
+}
+.col2 {
+	width: 45%;
+	display: inline-block;
+    font-size: 110%;
+	font-weight: 500;
+}
+.col3 {
+	width: 30%;
+	display: inline-block;
+	margin-top: 20px;
+	font-size: 110%;
+	font-weight: 500;
+}
+#iupdm-view-requests-content {
+    float: right;
+    font-size: 70%;
+    border: 1px solid;
+    padding: 2px 15px 5px;
+    border-radius: 4px;
+    color: #fff;
+    background-color: darkolivegreen;
+    font-weight: 400;
+    letter-spacing: .5px;
+    cursor: pointer;
+}
+
+/* ===================== */
+/* ===== ACCORDIAN ===== */
+/* --------------------- */
+#iupdm-info-accordian-container {
+    width: 99%;
+    margin: 30px 0 10px 0;
+    overflow: auto;
+	box-sizing: border-box;
+}
+.iupdm-info-accordian li{
+	padding:0;
+}
+
+.iupdm-info-accordian li.iupdm-section-heading {
+    background: #ddd;
+    padding: 18px 20px 15px;
+    font-weight: 400;
+    font-size: 150%;
+    border-top: 2px solid #f1f1f1;
+    border-bottom: 2px #707d7e solid;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+.iupdm-info-accordian li.iupdm-section-heading img{
+	margin-right: 10px;
+	transition: 0.3s ease-in-out;
+	vertical-align: sub;
+}
+.iupdm-section-arrows {
+	width: 20px;
+	height: 20px;
+}
+
+.iupdm-info-accordian li.iupdm-section-content{
+	background: #FFF;
+	padding: auto 0px !important;
+	display:none;
+}
+.iupdm-rotate{
+	-moz-transform:rotate(90deg);
+	-webkit-transform:rotate(90deg);
+	transform:rotate(90deg);
+
+}
+
+
+/* ================= */
+/* ===== MODAL ===== */
+/* ----------------- */
+.iupdm-modal {
+    display: none;
+    position: relative;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    overflow: auto;
+}
+.iupdm-modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 100px;
+    border: 1px solid #888;
+    width: 75%;
+    height: auto;
+    position: fixed;
+    top: 80px;
+    right: 60px;
+}
+.iupdm-modal-content strong {
+	color: #005658;
+	margin-right: 10px;
+}
+.iupdm-modal-user-info {
+	width: 30%;
+	display: inline-block;
+	vertical-align: top;
+}
+.iupdm-modal-request-info {
+    width: 70%;
+	display: inline-block;
+	vertical-align: top;
+}
+.iupdm-modal-close {
+    color: #007477;
+    font-size: 75px;
+    font-weight: 100;
+    display: block;
+    position: absolute;
+    right: 40px;
+    top: 40px;
+}  
+.iupdm-modal-close:hover,
+.iupdm-modal-close:focus {
+	text-decoration: none;
+	cursor: pointer;
+	opacity: 0.6;
+}
+
+
+/* ================== */
+/* ===== TABBED ===== */
+/* ------------------ */
+/* 
+    tabs 
+*/
+.request-status-tabs {
+	width:100%;
+    display:inline-block;
+    position: relative;
+}
+
+/* 
+    tab links 
+*/
+.request-status-tab-links:after {
+	display:block;
+	clear:both;
+	content:'';
+}
+.request-status-tab-links {
+    margin-top: 10px;
+}
+.request-status-tab-links li {
+	margin:0px 5px;
+	float:left;
+	list-style:none;
+}
+
+.request-status-tab-links a {
+    padding: 9px 15px;
+    display: inline-block;
+    border-radius: 3px 3px 0px 0px;
+    background: #03363a;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    transition: all linear 0.15s;
+    text-decoration: none;
+}
+.request-status-tab-links a:hover {
+	background:#07777e;
+	text-decoration:none;
+}
+
+li.request-status-active a, li.request-status-active a:hover {
+    background: #fff;
+    color: #4c4c4c;
+    font-weight: 700;
+    border-bottom: 2px solid #03363a;
+    cursor: unset !important;
+}
+/* 
+    tabs content 
+*/
+.request-status-tab-content {
+	background:#fff;
+}
+
+.request-status-tab {
+	display:none;
+}
+
+.request-status-tab.request-status-active {
+	display:block;
+}
+
+
+/* ========================== */
+/* ===== REQUESTS TABLE ===== */
+/* ====( made with divs )==== */
+/* -------------------------- */
+
+
+
+/* ========================== */
+/* ===== REQUESTS TABLE ===== */
+/* -------------------------- */
+#iupdm-rt-pending-data,
+#iupdm-rt-reviews-data,
+#iupdm-rt-approvals-data,
+#iupdm-rt-denials-data,
+#iupdm-rt-agreements-data {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #c3c3c3;
+    margin: 10px 0 0;
+    padding: 5px;
+    color: #007477;
+    display: block;
+    box-sizing: border-box;
+}
+#iupdm-rt-pending-data th,
+#iupdm-rt-reviews-data th,
+#iupdm-rt-approvals-data th,
+#iupdm-rt-denials-data th,
+#iupdm-rt-agreements-data th {
+	padding: 10px 0 15px;
+	border: 0;
+	border-bottom: 1px solid rgb(3, 92, 99);
+	font-size: 110%;
+}
+#iupdm-rt-pending-data td,
+#iupdm-rt-reviews-data td,
+#iupdm-rt-approvals-data td,
+#iupdm-rt-denials-data td,
+#iupdm-rt-agreements-data td {
+	padding: 10px 0 6px;
+	color: #273312;
+	vertical-align: top;
+	border-top: 1px solid #c3c3c3;
+}
+.iupdm-rt-q-and-a {
+	margin: 0 0 2px;
+	padding: 2px 0;
+	border-bottom: 1px dashed #ccc;
+}
+.iupdm-rt-q-and-a:last-child {
+	border-bottom: none;
+}
+.iupdm-rt-questions {
+	font-weight: 500 !important;
+	margin-right: 10px;
+    color: #005658;
+}
+.iupdm-view-icon {
+    height: 12px;
+    vertical-align: middle;
+    margin-left: 4px;
+}
+a.iupdm-rt-link {
+    color: #007477;
+    text-decoration: underline;
+    font-weight: 500;
+}
+a.iupdm-rt-link:hover {
+    color: #898d8d;
+    text-decoration: none;
+}
+
+
+/* ============================ */
+/* ===== TABLE PAGINATION ===== */
+/* ---------------------------- */
+#iupdm-pending-requests-pagination,
+#iupdm-review-requests-pagination,
+#iupdm-approved-requests-pagination,
+#iupdm-denied-requests-pagination,
+#iupdm-agreements-pagination {
+    padding: 12px 0 5px 10px;
+    font-size: 1.05rem;
+    font-weight: 400;
+    position: absolute;
+    right: 25px;
+    top: 5px;
+}
+#iupdm-pending-requests-pagination a.page-numbers,
+#iupdm-review-requests-pagination a.page-numbers,
+#iupdm-approved-requests-pagination a.page-numbers,
+#iupdm-denied-requests-pagination a.page-numbers,
+#iupdm-agreements-pagination a.page-numbers {
+    background-color: #06788e;
+    border: 1px solid #06788e;
+    color: #fff;
+    text-decoration: none;
+    padding: 0 10px 2px;
+    font-weight: 500;
+}
+#iupdm-pending-requests-pagination a.page-numbers:hover,
+#iupdm-review-requests-pagination a.page-numbers:hover,
+#iupdm-approved-requests-pagination a.page-numbers:hover,
+#iupdm-denied-requests-pagination a.page-numbers:hover,
+#iupdm-agreements-pagination a.page-numbers:hover {
+    background-color: #333333;
+    border: 1px solid #333333;
+}
+#iupdm-pending-requests-pagination span.page-numbers.current,
+#iupdm-review-requests-pagination span.page-numbers.current,
+#iupdm-approved-requests-pagination span.page-numbers.current,
+#iupdm-denied-requests-pagination span.page-numbers.current,
+#iupdm-agreements-pagination span.page-numbers.current {
+    border: 1px solid #06788e;
+    padding: 0 10px 2px;
+    box-sizing: border-box;
+    cursor: unset;
+}

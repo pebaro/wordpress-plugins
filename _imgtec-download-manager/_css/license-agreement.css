@@ -1,0 +1,20 @@
+.iupdm-single-license-image {
+	max-width: 150px !important;
+}
+.iupdm-laf-question {
+    margin: 20px 0 30px;
+    font-weight: 500;
+}
+.iupdm-laf-radio-group {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+[type="radio"] {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin-left: 5px;
+    vertical-align: bottom;
+    margin-right: 15px;
+}

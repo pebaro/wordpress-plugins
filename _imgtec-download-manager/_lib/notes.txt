@@ -1,0 +1,117 @@
+use isset against post meta for iup_download_approval_needed or check if value == 1
+if above isset then show request form and do not display download button
+
+	$download_data['approval_needed'] = isset( $download_data['approval_needed'] ) ? $download_data['approval_needed'] : 0;
+
+
+
+when entering single download template for package with request process, check usermeta to see if they have approval for that package and if so, show the download button. if logged out make user login before displaying button.
+
+
+add shortcode creation for downloads as a dedicated shortcode file and then list it in the hooks list
+
+
+add interstitial page to show after download button is clicked - make it editable for different content including elementor editing.
+
+
+download test one:
+ID = 110
+
+table: iup_wpforo_profiles  -->  column: fields
+{
+	"iup_email_address":"rob.masters@imgtec.com",
+	"iup_preferred_email_address":"PERSONAL",
+	"iup_title":"Mr",
+	"first_name":"Robert",
+	"iup_middle_name":"St.John",
+	"last_name":"Masters",
+	"iup_language":"English",
+	"iup_language_other":"",
+	"iup_office_tel_number":"01784881728",
+	"iup_home_tel_number":"01784881728",
+	"iup_mob_number":"07383976048",
+	"iup_commercial_status":"other",
+	"iup_commercial_status_other":"remote access student",
+	"iup_university_name":"DMU",
+	"iup_department":"Media",
+	"iup_job_role":"Imagination Employee",
+	"iup_job_role_other":"Web Developer",
+	"iup_address_one":"9 Hannibal Road",
+	"iup_address_two":"",
+	"iup_city":"Staines-upon-Thames",
+	"iup_region":"Surrey",
+	"iup_post_code":"TW19 7HG",
+	"iup_country":"One",
+	"iup_contact_consent":"YES",
+	"iup_share_consent":"NO"
+}
+		// var request_user_meta = downloadRequest.get_request_usermeta;
+		// if ( request_user_meta !== '' ){
+		// 	console.log( request_user_meta );
+		// }
+		// $existing_user_meta = get_user_meta( downloadRequest.user_id, 'download_requests', true );
+		// console.log( $existing_user_meta );
+		// $.ajax( {
+		// 	type: 'POST',
+		// 	// url: 'https://mandrillapp.com/api/1.0/messages/send.json',
+		// 	data: {
+		// 		'key': '8cc2032652bee9d2b6e9f2220fcc9fe3-us3',
+		// 		'message': {
+		// 			'from_email': 'iup@imgtec.com',
+		// 			'to': [
+		// 				{
+		// 					'email': 'rob.masters@imgtec.com',
+		// 					'type': 'to'
+		// 				}
+		// 			],
+		// 			'subject': 'test',
+		// 			'html': 'testing content'
+		// 		}
+		// 	}
+		// } ).done( function( response ){
+		// 	console.log( 'test completed' );
+		// } );
+
+"SELECT profile1.id, profile1.user_email,
+	MAX(CASE WHEN profile2.meta_key = 'first_name' THEN meta_value END) AS first_name,
+	MAX(CASE WHEN profile2.meta_key = 'last_name' THEN meta_value END) AS last_name 
+FROM "' . $wpdb->prefix . '"users AS profile1 
+INNER JOIN "' . $wpdb->prefix . '"usermeta AS profile2 ON profile1.id = profile2.user_id
+GROUP BY profile1.id, profile1.user_email;";
+
+
+"SELECT t1.id, t1.user_email,
+	MAX(CASE WHEN t2.meta_key = 'first_name' THEN meta_value END) AS first_name,
+	MAX(CASE WHEN t2.meta_key = 'last_name' THEN meta_value END) AS last_name 
+FROM wp_users AS t1 
+INNER JOIN wp_usermeta AS t2 ON t1.id = t2.user_id
+GROUP BY t1.id, t1.user_email;";
+
+
+	s:756:"{
+		"iup_email_address":"rob.masters@imgtec.com","
+		iup_preferred_email_address":"PERSONAL",
+		"iup_title":"Mr",
+		"first_name":"Robert",
+		"iup_middle_name":"St.John",
+		"last_name":"Masters",
+		"iup_language":"English",
+		"iup_language_other":"",
+		"iup_office_tel_number":"01784881728",
+		"iup_home_tel_number":"01784881728",
+		"iup_mob_number":"07383976048",
+		"iup_commercial_status":"other",
+		"iup_commercial_status_other":"remote access student",
+		"iup_university_name":"DMU",
+		"iup_department":"Media",
+		"iup_job_role":"Imagination Employee",
+		"iup_job_role_other":"Web Developer",
+		"iup_address_one":"9 Hannibal Road",
+		"iup_address_two":"",
+		"iup_city":"Staines-upon-Thames",
+		"iup_region":"Surrey",
+		"iup_post_code":"TW19 7HG",
+		"iup_country":"One",
+		"iup_contact_consent":"YES",
+		"iup_share_consent":"NO"
+	}";
