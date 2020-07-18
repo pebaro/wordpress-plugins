@@ -1,0 +1,51 @@
+
+
+                    <div class="it-row">
+                        <div class="it-one-half">
+                            <h3 class="it-results-section-heading">Company</h3>
+                            <h4 class="it-results-sub-section-heading">Locations</h4><!-- OFFUCES -->
+                            ${ results.locations.length 
+                                ? '<ul class="it-results-list">' 
+                                : `None of our Company Locations match that search - view <a href="${ liveSearch.site_root }/company/locations">all Locations</a><br>` 
+                            }
+                                ${ results.locations.map( item => `
+                                    <li>
+                                        <a href="${ item.permalink }">
+                                            ${ item.title }
+                                        </a>
+                                    </li>
+                                ` ).join( '' ) 
+                            }
+                            ${ results.locations.length ? '</ul>' : '' }
+
+                            <h4 class="it-results-sub-section-heading">Staff Profiles</h4><!-- STAFF -->
+                            ${ results.staff_profiles.length 
+                                ? '<ul class="it-results-list">' 
+                                : `None of our Staff Profiles match that search - view the company's <a href="${ liveSearch.site_root }/company/leadership">Leadership</a><br>` 
+                            }
+                                ${ results.staff_profiles.map( item => `
+                                    <li>
+                                        <a style="vertical-align:middle;" href="${ item.permalink }">
+                                            <div class="it-40pc">
+                                                <img src="${ item.photo.url }" width="200" height="200">
+                                            </div>
+                                            <div class="it-60pc">
+                                                <span><strong>${ item.title }</strong></span><br>
+                                                <span>${ item.position }</span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                ` ).join( '' ) }
+                            ${ results.staff_profiles.length ? '</ul>' : '' }
+                        </div>
+
+                        <div class="it-one-half">
+                            <h3 class="it-results-section-heading">Downloads</h3>
+                            <h4 class="it-results-sub-section-heading">Developer Documentation</h4>
+                            not set up yet
+                            <h4 class="it-results-sub-section-heading">Documentation</h4>
+                            not set up yet
+                            <h4 class="it-results-sub-section-heading">Software</h4>
+                            not set up yet
+                        </div>
+                    </div>

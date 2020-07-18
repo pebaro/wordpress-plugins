@@ -1,0 +1,44 @@
+    // ============
+    // LOCATIONS
+    $query_locations = new WP_Query( array(
+        's'                 => sanitize_text_field( $data[ 'terms' ] ),
+        'posts_per_page'    => 10,
+        'post_type'         => 'locations'
+    ) );
+    while ( $query_locations->have_posts() ) :
+        $query_locations->the_post();
+
+        if ( get_post_type() == 'locations' ){
+            array_push( $results[ 'locations' ], array(
+                'title'     => get_the_title(),
+                'permalink' => get_the_permalink(),
+                'id'        => get_the_ID()
+            ) );
+        }
+
+    endwhile; wp_reset_postdata();
+
+
+    // =================
+    // STAFF PROFILES
+    $query_profiles = new WP_Query( array(
+        's'                 => sanitize_text_field( $data[ 'terms' ] ),
+        'posts_per_page'    => 10,
+        'post_type'         => 'staff_profiles'
+    ) );
+    while ( $query_profiles->have_posts() ) :
+        $query_profiles->the_post();
+
+        if ( get_post_type() == 'staff_profiles' ){
+
+
+            array_push( $results[ 'staff_profiles' ], array(
+                'title'     => get_the_title(),
+                'position'  => get_field( 'position' ),
+                'permalink' => get_the_permalink(),
+                'photo'     => get_field( 'photo' ),
+                'id'        => get_the_ID()
+            ) );
+        }
+
+    endwhile; wp_reset_postdata();

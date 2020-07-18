@@ -1,0 +1,220 @@
+        // get search results
+        getResults(){
+            // search using custom Rest API URL
+            $.getJSON( liveSearch.site_root + '/wp-json/livesearch/v1/results?terms=' + this.searchField.val(), ( results ) => {
+
+                // populate results container with results for each post type
+                this.resultsContainer.html(`
+                    <div class="it-row">
+                        <div class="it-full-width">
+                            <h3 class="it-results-section-heading">The 25 Most Relevant Mixed Results</h3>
+                            <h4 class="it-results-sub-section-heading">From across the whole site</h4><!-- GENERAL -->
+                            ${ results.general.length 
+                                ? '<ul class="it-results-list">' 
+                                : `Nothing matches that search - please try something else<br>`
+                            }
+                                ${ results.general.map( item => `
+                                    <li>
+                                        <a href="${ item.permalink }">
+                                            ${ item.title }
+                                        </a><br>
+                                        <small>${ item.permalink }</small><br>
+                                        ${ item.excerpt ? `<small>${ item.excerpt }</small><br>` : '' }
+                                        <small><strong>${ item.type }</strong></small>
+                                    </li>
+                                ` ).join( '' ) }
+                            ${ results.general.length ? '</ul>' : '' }
+                        </div>
+                    </div>
+
+
+                    <div class="it-row">
+                        <div class="it-one-half">
+                            <h3 class="it-results-section-heading">Pages &amp; Blog Posts</h3><h4 class="it-results-sub-section-heading">Pages</h4><!-- PAGES -->
+                            ${ results.pages.length 
+                                ? '<ul class="it-results-list">' 
+                                : `None of our Pages match that search - view our <a href="">site map</a><br>`
+                            }
+                                ${ results.pages.map( item => `
+                                    <li>
+                                        <a href="${ item.permalink }">
+                                            ${ item.title }
+                                        </a>
+                                    </li>
+                                ` ).join( '' ) }
+                            ${ results.pages.length ? '</ul>' : '' }
+
+                            <h4 class="it-results-sub-section-heading">Blog Posts</h4><!-- POSTS -->
+                            ${ results.posts.length 
+                                ? '<ul class="it-results-list">' 
+                                : `None of our Blog Posts match that search - visit <a href="${ liveSearch.site_root }/blog">our Blog</a><br>` 
+                            }
+                                ${ results.posts.map( item => `
+                                    <li>
+                                        <a href="${ item.permalink}">
+                                            ${ item.title }
+                                        </a> <small>posted by ${ item.author }</small>
+                                    </li>
+                                ` ).join( '' ) }
+                            ${ results.posts.length ? '</ul>' : ''}
+                        </div>
+
+                        <div class="it-one-half">
+                            <h3 class="it-results-section-heading">Technology</h3>
+                            <h4 class="it-results-sub-section-heading">PowerVR Cores</h4><!-- CORES -->
+                            ${ results.powervr_gpus.length 
+                                ? '<ul class="it-results-list">' 
+                                : `None of our PowerVR Cores match that search - view all <a href="${ liveSearch.site_root }/graphics-processors/powervr-gpus">PowerVR Cores</a><br>` 
+                            }
+                                ${ results.powervr_gpus.map( item => `
+                                    <li>
+                                        <a href="${ item.permalink }">
+                                            ${ item.title }
+                                        </a><br>
+                                        <small>Built using ${ item.architecture } &mdash; from the <a href="${ item.series_link }">${ item.series } family</a></small>
+                                    </li>
+                                `).join( '' ) }
+                            ${ results.powervr_gpus.length ? '</ul>' : '' }
+
+                            <h4 class="it-results-sub-section-heading">Platforms</h4><!-- PLATFORMS -->
+                            ${ results.platforms.length 
+                                ? '<ul class="it-results-list">' 
+                                : `None of our Platforms match that search - view all <a href="${ liveSearch.site_root }/developers/platforms">Platforms</a><br>` 
+                            }
+                                ${ results.platforms.map( item => `
+                                    <li>
+                                        <a href="${ item.permalink }">
+                                            ${ item.title }
+                                        </a>
+                                    </li>
+                                ` ).join( '' ) }
+                            ${ results.platforms.length ? '</ul>' : '' }
+                        </div>
+                    </div>
+
+
+                    <div class="it-row">
+                        <div class="it-one-half">
+                            <h3 class="it-results-section-heading">News & Press</h3>
+                            <h4 class="it-results-sub-section-heading">Press Releases</h4><!-- PRESS -->
+                            ${ results.press_releases.length 
+                                ? '<ul class="it-results-list">' 
+                                : `None of our Press Releases match that search - view all <a href="${ liveSearch.site_root } /press-releases">Press Releases</a><br>` 
+                            }
+                                ${ results.press_releases.map( item => `
+                                    <li>
+                                        <a href="${ item.permalink }">
+                                            ${ item.title }
+                                        </a>
+                                    </li>
+                                ` ).join( '' ) }
+                            ${ results.press_releases.length ? '</ul>' : '' }
+
+                            <h4 class="it-results-sub-section-heading">News</h4><!-- NEWS -->
+                            ${ results.the_news.length 
+                                ? '<ul class="it-results-list">' 
+                                : `None of our News Articles match that search - view all <a href="${ liveSearch.site_root }/in-the-news">News Articles</a><br>` 
+                            }
+                                ${ results.the_news.map( item => `
+                                    <li>
+                                        <a href="${ item.permalink }">
+                                            ${ item.title }
+                                        </a>
+                                    </li>
+                                ` ).join( '' ) }
+                            ${ results.the_news.length ? '</ul>' : '' }
+
+                            <h4 class="it-results-sub-section-heading">EcoSystem News</h4><!-- ECO NEWS -->
+                            ${ results.ecosystem_news.length 
+                                ? '<ul class="it-results-list">' 
+                                : `None of our EcoSystem News Articles match that search - view all <a href="${ liveSearch.site_root }/news/ecosystem">EcoSystem News</a><br>` 
+                            }
+                                ${ results.ecosystem_news.map( item => `
+                                    <li>
+                                        <a href="${ item.permalink }">
+                                            ${ item.title }
+                                        </a>
+                                    </li>
+                                ` ).join( '' ) }
+                            ${ results.ecosystem_news.length ? '</ul>' : '' }
+                        </div>
+
+                        <div class="it-one-half">
+                            <h3 class="it-results-section-heading">Our Events</h3>
+                            <h4 class="it-results-sub-section-heading">Events</h4><!-- EVENTS -->
+                            ${ results.events.length 
+                                ? '<ul class="it-results-list">' 
+                                : `None of our Events match that search - view all <a href="${ liveSearch.site_root }/events">Events</a><br>` 
+                            }
+                                ${ results.events.map( item => `
+                                    <li>
+                                        <a href="${ item.permalink }">
+                                            ${ item.title }
+                                        </a><br>
+                                        <small>${ item.dates }</small>
+                                    </li>
+                                ` ).join( '' ) }
+                            ${ results.events.length ? '</ul>' : '' }
+
+                            <h4 class="it-results-sub-section-heading">Webinars</h4><!-- WEBINARS -->
+                            ${ results.webinars.length 
+                                ? '<ul class="it-results-list">' 
+                                : `None of our Webinars match that search - view all <a href="${ liveSearch.site_root }/events/webinars">Webinars</a><br>`
+                            }
+                                ${ results.webinars.map( item => `
+                                    <li>
+                                        <a href="${ item.permalink }">
+                                            ${ item.title }
+                                        </a><br>
+                                        <small>${ item.duration } minute webcast presented by ${ item.speaker }</small>
+                                    </li>
+                                ` ).join( '' ) }
+                            ${ results.webinars.length ? '</ul>' : '' }
+
+                            <h4 class="it-results-sub-section-heading">Presentations</h4><!-- PRESENTATIONS -->
+                            ${ results.presentations.length 
+                                ? '<ul class="it-results-list">' 
+                                : `None of our Presentations match that search - view all <a href="${ liveSearch.site_root }/events/presentations">Presentations</a><br>`
+                            }
+                                ${ results.presentations.map( item => `
+                                    <li>
+                                        <a href="${ item.permalink }">
+                                            ${ item.title }
+                                        </a><br>
+                                        ${ item.presented }<br>
+                                        <small>
+                                            Host event: ${ item.event } &nbsp;&nbsp; ${ item.dates }
+                                        </small>
+                                    </li>
+                                ` ).join( '' ) }
+                            ${ results.presentations.length ? '</ul>' : '' }
+                        </div>
+                    </div>
+
+
+                    <div class="it-row">
+                        <div class="it-one-half">
+                            <h3 class="it-results-section-heading">Company</h3>
+                            <h4 class="it-results-sub-section-heading">Partners</h4><!-- PARTNERS -->
+                            ${ results.partners.length 
+                                ? '<ul class="it-results-list">' 
+                                : `None of our Partners match that search - view all <a href="${ liveSearch.site_root }/partners">Partners</a><br>` 
+                            }
+                                ${ results.partners.map( item => `
+                                    <li>
+                                        <a href="${ item.permalink }">
+                                            ${ item.title }
+                                        </a><br>
+                                        <small>${ item.partner_type }</small>
+                                    </li>
+                                ` ).join( '' ) }
+                            ${ results.partners.length ? '</ul>' : '' }
+                        </div>
+                        <div class="it-one-half">&nbsp;</div>
+                    </div>
+                `);
+
+                // set loader to handler input changes
+                this.isLoaderVisible = false;
+            } );
+        }
