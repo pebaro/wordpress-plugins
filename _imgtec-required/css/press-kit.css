@@ -1,0 +1,51 @@
+.itpk-required {
+    color: #ff1256 !important;
+    font-weight: 900;
+}
+#itpk-rf {
+    margin-bottom: 30px;
+}
+.itpk-row {
+	margin: 0;
+	padding: 0;
+}
+.itpk-2col {
+    width: 50%;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+.itpk-input {
+    /* width: 50% !important; */
+    margin-bottom: 15px !important;
+}
+.itpk-textarea {
+    /* width: 80% !important; */
+    display: block !important;
+}
+#itpk-buttons-container {
+	padding-top: 40px !important;
+}
+#itpk-buttons-container input[type="reset"] {
+    font-family: "Aktiv Grotesk Bold", Sans-serif;
+    background-color: #FFF;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 2px;
+    padding: 8px 55px;
+    /* font-size: 17px; */
+    font-family: Aktiv Grotesk Regular , Arial, "sans-serif";
+    font-weight: 500;
+}
+#itpk-buttons-container input[type="submit"] {
+    background-color: #000;
+    border: 1px solid #000;
+    margin-right: 5px;
+    padding: 8px 55px;
+    /* font-size: 17px; */
+    font-family: Aktiv Grotesk Regular , Arial, "sans-serif";
+    font-weight: 500;
+}
+.itpk-button:hover {
+    opacity: 0.9;
+}
