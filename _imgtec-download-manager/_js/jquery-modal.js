@@ -3,7 +3,7 @@
 
 		// dom elements
 		var requestInfo = $( 'td.request_info' );
-		var modal 		= $( '.iupdm-modal' );
+		var modal 	= $( '.iupdm-modal' );
 		var openModal 	= $( '.iupdm-open-modal' );
 		var closeModal 	= $( '.iupdm-modal-close' );
 
