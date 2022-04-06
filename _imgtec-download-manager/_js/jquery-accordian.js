@@ -2,18 +2,18 @@
 	$( document ).ready( function(){
 
 		// settings
-		var speedUp 			= '600';
-		var speedDown 			= '600';
+		var speedUp 		= '600';
+		var speedDown 		= '600';
 		// dom elements
-		var heading 			= $( 'li.iupdm-section-heading' );
-		var image 				= $( 'img' );
+		var heading 		= $( 'li.iupdm-section-heading' );
+		var image 		= $( 'img' );
 		var requestsSection 	= $( '#iupdm-requests-content' );
 		var requestsHeading 	= $( '#iupdm-requests-heading' );
 		var viewRequestsContent	= $( '#iupdm-view-requests-content' );
 		var statisticsContent 	= $( '#iupdm-statistics-content' );
 		var statisticsHeading 	= $( '#iupdm-statistics-heading' );
 		// css
-		var rotate 				= 'iupdm-rotate';
+		var rotate 		= 'iupdm-rotate';
 
 		// open up the section for download requests
 		requestsSection.slideToggle();
