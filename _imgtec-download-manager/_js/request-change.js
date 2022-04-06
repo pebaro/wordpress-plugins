@@ -16,9 +16,9 @@
 				$.post(
 					requestChange.ajax_url,
 					{
-						action 			: 'iupdm_change_request_status',
-						new_status 		: selectVal,
-						user_id 		: $( this ).data( 'userid' ),
+						action 		: 'iupdm_change_request_status',
+						new_status 	: selectVal,
+						user_id 	: $( this ).data( 'userid' ),
 						download_id 	: $( this ).data( 'downloadid' )
 					},
 					( data ) => {
