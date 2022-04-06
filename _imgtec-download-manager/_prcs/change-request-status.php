@@ -5,18 +5,18 @@ function iupdm_change_request_status(){
 	global $post;
 	global $wpdb;
 
-	// $timestamp 			= date( 'YmdHis', time() );
-	$timestamp 			= time();
+	// $timestamp 	= date( 'YmdHis', time() );
+	$timestamp 	= time();
 
-	$user_id 			= $_POST[ 'user_id' ];
-	$download_id 		= $_POST[ 'download_id' ];
-	$new_status 		= $_POST[ 'new_status' ];
-	$user_info 			= wp_get_current_user();
-	$first_name 		= $user_info->user_firstname;
-	$login 				= $user_info->user_login;
+	$user_id 	= $_POST[ 'user_id' ];
+	$download_id 	= $_POST[ 'download_id' ];
+	$new_status 	= $_POST[ 'new_status' ];
+	$user_info 	= wp_get_current_user();
+	$first_name 	= $user_info->user_firstname;
+	$login 		= $user_info->user_login;
 
-	$data 	= [ 'request_status' => $new_status, 'timestamp' => $timestamp ];
-	$where 	= [ 'user_id' => $user_id, 'download_id' => $download_id ];
+	$data 		= [ 'request_status' => $new_status, 'timestamp' => $timestamp ];
+	$where 		= [ 'user_id' => $user_id, 'download_id' => $download_id ];
 
 	$wpdb->update( $wpdb->prefix . 'dm_requests', $data, $where );
 
