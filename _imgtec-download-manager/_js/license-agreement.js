@@ -64,12 +64,12 @@
 
 			if ( agree_license.checked ){
 				var form = {
-					action 			: 'iupdm_license_agreement',
-					license_id 		: licenseAgreement.license_id,
+					action 		: 'iupdm_license_agreement',
+					license_id 	: licenseAgreement.license_id,
 					license_title 	: licenseAgreement.license_title,
 					license_url 	: licenseAgreement.license_url,
 					terms_agreed 	: agree_license.checked ? 'Yes' : 'No',
-					user_id 		: licenseAgreement.user_id
+					user_id 	: licenseAgreement.user_id
 				}
 			} else {
 				alert( 'you need to agree the license' );
