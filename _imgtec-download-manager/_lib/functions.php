@@ -26,8 +26,8 @@ function iupdm_trigger_denied_status_change() {
 	global $post;
 	global $wpdb;
 
-	$timestamp 		= time();
-	$timecheck 		= time() - 259200;
+	$timestamp 	= time();
+	$timecheck 	= time() - 259200;
 	$new_status 	= $_POST[ 'new_status' ];
 
 	$denied_requests = $wpdb->get_results(
@@ -38,22 +38,22 @@ function iupdm_trigger_denied_status_change() {
 	foreach ( $denied_requests as $denial ) :
 		if ( $timecheck >= $denial->timestamp ) :
 
-			$denial_id			= $denial->ID;
+			$denial_id		= $denial->ID;
 			$user_email 		= $denial->preferred_email;
-			$username			= $denial->username;
+			$username		= $denial->username;
 			$download_title 	= $denial->download_title;
 			$download_page 		= $denial->download_page;
 
 			$new_status 		= 'history';
 			$new_timestamp 		= time();
-			// $new_timestamp 		= date( 'YmdHis', time() );
+			// $new_timestamp 	= date( 'YmdHis', time() );
 
-			$data 				= [ 
+			$data 			= [ 
 				'request_status' 	=> $new_status, 
 				'timestamp' 		=> $new_timestamp 
 			];
-			$where 				= [ 
-				'ID' 				=> $denial_id 
+			$where 			= [ 
+				'ID' 			=> $denial_id 
 			];
 
 			$wpdb->update( $wpdb->prefix . 'dm_requests', $data, $where );
