@@ -7,34 +7,34 @@ function iupdm_download_request(){
 
 	$admin_email 			= 'iup@imgtec.com';
 
-	$output 				= [ 'status' => 1 ];
-	$timestamp 				= time();
-	$user_ip 				= $_SERVER[ 'REMOTE_ADDR' ];
-	$user_id 				= absint( $_POST[ 'user_id' ] );
+	$output 			= [ 'status' => 1 ];
+	$timestamp 			= time();
+	$user_ip 			= $_SERVER[ 'REMOTE_ADDR' ];
+	$user_id 			= absint( $_POST[ 'user_id' ] );
 	$download_id 			= absint( $_POST[ 'download_id' ] );
 	$download_url 			= $_POST[ 'download_url' ];
 	$download_title 		= $_POST[ 'download_title' ];
-	$page 					= $_POST[ 'download_page' ];
-	$version 				= $_POST[ 'download_version' ];
+	$page 				= $_POST[ 'download_page' ];
+	$version 			= $_POST[ 'download_version' ];
 	$request_purpose 		= $_POST[ 'request_purpose' ];
 	$course_name 			= $_POST[ 'course_name' ];
 	$project_objective 		= $_POST[ 'project_objective' ];
 	$other_reason 			= $_POST[ 'other_reason' ];
-	$optional 				= $_POST[ 'optional' ];
+	$optional 			= $_POST[ 'optional' ];
 	$start_month 			= $_POST[ 'start_month' ];
 	$start_year 			= $_POST[ 'start_year' ];
 	$number_students 		= absint( $_POST[ 'number_of_students' ] );
 	$student_level 			= $_POST[ 'student_level' ];
-	$feedback 				= $_POST[ 'feedback' ];
+	$feedback 			= $_POST[ 'feedback' ];
 	$feedback_when 			= $_POST[ 'feedback_when' ];
-	$comments 				= $_POST[ 'comments' ];
+	$comments 			= $_POST[ 'comments' ];
 	$approval_admins 		= $_POST[ 'approval_admins' ];
 	$request_status 		= $_POST[ 'request_status' ];
 	
 	// global  = wp_get_current_user();; 
-	$user_info 				= wp_get_current_user();
+	$user_info 			= wp_get_current_user();
 	$user_displayname 		= $user_info->display_name;
-	$iup_email 				= $user_info->user_email;
+	$iup_email 			= $user_info->user_email;
 
 	$request_count 	= $wpdb->get_var(
 		"SELECT COUNT(*) FROM `" . $wpdb->prefix . "dm_requests` 
@@ -46,30 +46,30 @@ function iupdm_download_request(){
 	
 	$wpdb->insert(
 		$wpdb->prefix . 'dm_requests', [
-			'timestamp' 			=> $timestamp,
-			'user_ip' 				=> $user_ip,
-			'username' 				=> $user_displayname,
-			'preferred_email' 		=> $iup_email,
-			'user_id' 				=> $user_id,
-			'download_id' 			=> $download_id,
-			'download_url' 			=> $download_url,
-			'download_title' 		=> $download_title,
-			'download_page' 		=> $page,
-			'download_version' 		=> $version,
-			'request_status' 		=> $request_status,
-			'request_purpose' 		=> $request_purpose,
-			'course_name' 			=> $course_name,
+			'timestamp' 		=> $timestamp,
+			'user_ip' 		=> $user_ip,
+			'username' 		=> $user_displayname,
+			'preferred_email' 	=> $iup_email,
+			'user_id' 		=> $user_id,
+			'download_id' 		=> $download_id,
+			'download_url' 		=> $download_url,
+			'download_title' 	=> $download_title,
+			'download_page' 	=> $page,
+			'download_version' 	=> $version,
+			'request_status' 	=> $request_status,
+			'request_purpose' 	=> $request_purpose,
+			'course_name' 		=> $course_name,
 			'project_objective' 	=> $project_objective,
-			'other_reason' 			=> $other_reason,
-			'optional' 				=> $optional,
-			'start_month' 			=> $start_month,
-			'start_year' 			=> $start_year,
+			'other_reason' 		=> $other_reason,
+			'optional' 		=> $optional,
+			'start_month' 		=> $start_month,
+			'start_year' 		=> $start_year,
 			'number_of_students' 	=> $number_students,
-			'student_level' 		=> $student_level,
-			'feedback' 				=> $feedback,
-			'feedback_when' 		=> $feedback_when,
-			'comments' 				=> $comments,
-			'approval_admins' 		=> $admin_email
+			'student_level' 	=> $student_level,
+			'feedback' 		=> $feedback,
+			'feedback_when' 	=> $feedback_when,
+			'comments' 		=> $comments,
+			'approval_admins' 	=> $admin_email
 		], [
 			'%s', // timestamp
 			'%s', // user_ip
