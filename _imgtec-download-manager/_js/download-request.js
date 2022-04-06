@@ -24,9 +24,9 @@
 		// =============================
 		if ( document.getElementById( 'iupdm-rf-request-purpose' ) ){
 			// form
-			const request_form 		= document.forms[ 'iupdmRF' ];
+			const request_form = document.forms[ 'iupdmRF' ];
 			// select route 
-			const request_purpose 	= request_form[ 'iupdmRFRequestPurpose' ];
+			const request_purpose = request_form[ 'iupdmRFRequestPurpose' ];
 
 			// set the main route of questions to follow
 			request_purpose.addEventListener( 'change', ( e ) => {
@@ -770,9 +770,9 @@
 				// check request_purpose value to set the form configuration
 				if ( request_purpose.value == 'course-labs' ){
 					var form = {
-						action 					: 'iupdm_download_request',
-						user_ip 				: downloadRequest.user_ip,
-						user_id 				: downloadRequest.user_id,
+						action 				: 'iupdm_download_request',
+						user_ip 			: downloadRequest.user_ip,
+						user_id 			: downloadRequest.user_id,
 						download_id 			: downloadRequest.download_id,
 						download_url 			: downloadRequest.download_url,
 						download_title 			: downloadRequest.download_title,
@@ -781,20 +781,20 @@
 						request_status 			: 'pending',
 						request_purpose 		: request_purpose.value,
 						course_name 			: document.forms[ 'iupdmRF' ][ 'iupdmRFCourseName' ].value,
-						optional 				: optional.checked ? 'yes' : 'no',
+						optional 			: optional.checked ? 'yes' : 'no',
 						start_month 			: document.forms[ 'iupdmRF' ][ 'iupdmRFStartMonth' ].value,
-						start_year 				: document.forms[ 'iupdmRF' ][ 'iupdmRFStartYear' ].value,
+						start_year 			: document.forms[ 'iupdmRF' ][ 'iupdmRFStartYear' ].value,
 						number_of_students 		: document.forms[ 'iupdmRF' ][ 'iupdmRFStudentsNumber' ].value,
 						student_level 			: document.forms[ 'iupdmRF' ][ 'iupdmRFStudentLevel' ].value,
-						feedback 				: feedback.checked ? 'yes' : 'no',
+						feedback 			: feedback.checked ? 'yes' : 'no',
 						feedback_when 			: document.forms[ 'iupdmRF' ][ 'iupdmRFFeedbackWhen' ].value,
-						comments 				: document.forms[ 'iupdmRF' ][ 'iupdmRFComments' ].value
+						comments 			: document.forms[ 'iupdmRF' ][ 'iupdmRFComments' ].value
 					}	
 				} else if ( request_purpose.value == 'student-projects' ){
 					var form = {
-						action 					: 'iupdm_download_request',
-						user_ip 				: downloadRequest.user_ip,
-						user_id 				: downloadRequest.user_id,
+						action 				: 'iupdm_download_request',
+						user_ip 			: downloadRequest.user_ip,
+						user_id 			: downloadRequest.user_id,
 						download_id 			: downloadRequest.download_id,
 						download_url 			: downloadRequest.download_url,
 						download_title 			: downloadRequest.download_title,
@@ -805,15 +805,15 @@
 						project_objective 		: document.forms[ 'iupdmRF' ][ 'iupdmRFProjectObjective' ].value,
 						number_of_students 		: document.forms[ 'iupdmRF' ][ 'iupdmRFStudentsNumber' ].value,
 						student_level 			: document.forms[ 'iupdmRF' ][ 'iupdmRFStudentLevel' ].value,
-						feedback 				: feedback.checked ? 'yes' : 'no',
+						feedback 			: feedback.checked ? 'yes' : 'no',
 						feedback_when 			: document.forms[ 'iupdmRF' ][ 'iupdmRFFeedbackWhen' ].value,
-						comments 				: document.forms[ 'iupdmRF' ][ 'iupdmRFComments' ].value
+						comments 			: document.forms[ 'iupdmRF' ][ 'iupdmRFComments' ].value
 					}
 				} else {
 					var form = {
-						action 					: 'iupdm_download_request',
-						user_ip 				: downloadRequest.user_ip,
-						user_id 				: downloadRequest.user_id,
+						action 				: 'iupdm_download_request',
+						user_ip 			: downloadRequest.user_ip,
+						user_id 			: downloadRequest.user_id,
 						download_id 			: downloadRequest.download_id,
 						download_url 			: downloadRequest.download_url,
 						download_title 			: downloadRequest.download_title,
@@ -824,9 +824,9 @@
 						other_reason 			: document.forms[ 'iupdmRF' ][ 'iupdmRFOtherReason' ].value,
 						number_of_students 		: document.forms[ 'iupdmRF' ][ 'iupdmRFStudentsNumber' ].value,
 						student_level 			: document.forms[ 'iupdmRF' ][ 'iupdmRFStudentLevel' ].value,
-						feedback 				: feedback.checked ? 'yes' : 'no',
+						feedback 			: feedback.checked ? 'yes' : 'no',
 						feedback_when 			: document.forms[ 'iupdmRF' ][ 'iupdmRFFeedbackWhen' ].value,
-						comments 				: document.forms[ 'iupdmRF' ][ 'iupdmRFComments' ].value
+						comments 			: document.forms[ 'iupdmRF' ][ 'iupdmRFComments' ].value
 					}
 				}
 	
