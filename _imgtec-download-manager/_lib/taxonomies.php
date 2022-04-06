@@ -23,8 +23,8 @@ function iupdm_download_manager_taxononomies(){
 		'show_ui'           	=> true,
 		'show_admin_column' 	=> true,
 		'query_var'         	=> true,
-		'show_in_rest' 			=> true,
-		'rest_base' 			=> 'download_categories',
+		'show_in_rest' 		=> true,
+		'rest_base' 		=> 'download_categories',
 		'rest_controller_class' => 'WP_REST_Terms_Controller',
 		'rewrite'           	=> [ 'slug' => 'download-categories' ]
 	];
