@@ -15,7 +15,7 @@ function iupdm_download_template( $content ){
 	// prepare
 	$download_content 	= ''; 																// content string
 	$non_approval_roles 	= [ 'administrator', 'editor', 'author' ]; 							// approval not needed
-	$is_logged_in 		= is_user_logged_in(); 												// ? logged in
+	$is_logged_in 		= is_user_logged_in(); 										// ? logged in
 
 	// get user object
 	$is_logged_in == 1 ? $user = wp_get_current_user() : ''; 								// var_dump($user);
@@ -23,14 +23,14 @@ function iupdm_download_template( $content ){
 	! empty( $user ) ? $user_roles = $user->roles : ''; 									//var_dump($user_roles);
 
 	// get meta data
-	$description 		= get_field( 'iup_download_description' ); 								// main content
-	$version 		= get_field( 'iup_download_version' ); 									// version number
-	$cdn_url 		= get_field( 'iup_download_url' ); 										// download url
+	$description 		= get_field( 'iup_download_description' ); 							// main content
+	$version 		= get_field( 'iup_download_version' ); 								// version number
+	$cdn_url 		= get_field( 'iup_download_url' ); 								// download url
 	$license 		= get_field( 'iup_license_agreement_needed' ); 							// ? license needed
 	$license_url 		= get_field( 'iup_select_license_agreement' ); 							// license url
 	$license_id 		= get_post_meta( get_the_ID(), 'iup_select_license_agreement', true ); 	// license id
 	$approval 		= get_field( 'iup_download_approval_needed' ); 							// ? approval needed
-	$img 			= get_field( 'iup_download_image' ); 									// download image
+	$img 			= get_field( 'iup_download_image' ); 								// download image
 	$img_url 		= $img[ 'url' ]; 														// image url
 	$img_alt 		= $img[ 'alt' ]; 														// image alt text
 	$img_title 		= $img[ 'title' ]; 														// image title
