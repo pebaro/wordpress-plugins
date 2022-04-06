@@ -14,7 +14,7 @@ function iupdm_download_template( $content ){
 
 	// prepare
 	$download_content 	= ''; 																// content string
-	$non_approval_roles = [ 'administrator', 'editor', 'author' ]; 							// approval not needed
+	$non_approval_roles 	= [ 'administrator', 'editor', 'author' ]; 							// approval not needed
 	$is_logged_in 		= is_user_logged_in(); 												// ? logged in
 
 	// get user object
@@ -23,12 +23,12 @@ function iupdm_download_template( $content ){
 	! empty( $user ) ? $user_roles = $user->roles : ''; 									//var_dump($user_roles);
 
 	// get meta data
-	$description 	= get_field( 'iup_download_description' ); 								// main content
+	$description 		= get_field( 'iup_download_description' ); 								// main content
 	$version 		= get_field( 'iup_download_version' ); 									// version number
 	$cdn_url 		= get_field( 'iup_download_url' ); 										// download url
 	$license 		= get_field( 'iup_license_agreement_needed' ); 							// ? license needed
-	$license_url 	= get_field( 'iup_select_license_agreement' ); 							// license url
-	$license_id 	= get_post_meta( get_the_ID(), 'iup_select_license_agreement', true ); 	// license id
+	$license_url 		= get_field( 'iup_select_license_agreement' ); 							// license url
+	$license_id 		= get_post_meta( get_the_ID(), 'iup_select_license_agreement', true ); 	// license id
 	$approval 		= get_field( 'iup_download_approval_needed' ); 							// ? approval needed
 	$img 			= get_field( 'iup_download_image' ); 									// download image
 	$img_url 		= $img[ 'url' ]; 														// image url
@@ -185,31 +185,24 @@ function iupdm_download_template( $content ){
 
 		$download_content .= '<hr style="margin-bottom: 30px !important; opacity: 0.3;">';
 		$download_content .= '<a class="button" href="' . $cdn_url . '">Download Now</a>';
-
 		$download_content .= '</div>';
 
 	elseif ( $status_check == 'denied' ) : // REQUEST STATUS = DENIED
 
 		$download_content .= '<h4>Your request for this download package has unfortunately been denied</h4>';
-
 		$download_content .= 'You must first wait for a few days before requesting this package again - Thank you!';
-
 		$download_content .= '</div>';
 
 	elseif ( $status_check == 'review' ) : // REQUEST STATUS = REVIEW
 
 		$download_content .= '<h4>Your request for this download package is currently being reviewed</h4>';
-
 		$download_content .= 'The university team are extremely busy, so please be patient and allow a few days for the completion of this review. If your response does not come through to your inbox, please check your junk mail - Thank you!';
-
 		$download_content .= '</div>';
 
 	else : // REQUEST STATUS = PENDING
 
 		$download_content .= '<h4>Your request for this download package is currently pending awaiting a decision</h4>';
-
 		$download_content .= 'The university team are extremely busy, so please be patient and allow a few days for a decision to be made. If your response does not come through to your inbox, please check your junk mail - Thank you!';
-
 		$download_content .= '</div>';
 
 	endif;
