@@ -5,20 +5,20 @@ function iupdm_license_agreement(){
 	global $post;
 	global $wpdb;
 
-	$output 			= [ 'status' => 1 ];
-	$user_id 			= $_POST[ 'user_id' ];
+	$output 		= [ 'status' => 1 ];
+	$user_id 		= $_POST[ 'user_id' ];
 	$license_id 		= $_POST[ 'license_id' ];
 	$license_title 		= $_POST[ 'license_title' ];
 	$license_url 		= $_POST[ 'license_url' ];
 	$terms_agreed 		= $_POST[ 'terms_agreed' ];
-	$username 			= $_POST[ 'username' ];
+	$username 		= $_POST[ 'username' ];
 	$preferred_email 	= $_POST[ 'preferred_email' ];
 	
 	// global $current_user; 
-	$user_info 			= wp_get_current_user();
+	$user_info 		= wp_get_current_user();
 	$user_displayname 	= $user_info->display_name;
-	$iup_email 			= $user_info->user_email;
-	$userid 			= get_current_user_id();
+	$iup_email 		= $user_info->user_email;
+	$userid 		= get_current_user_id();
 
 	$agreement_count 	= $wpdb->get_var(
 		"SELECT COUNT(*) FROM `" . $wpdb->prefix . "dm_agreements` 
@@ -31,12 +31,12 @@ function iupdm_license_agreement(){
 
 	$wpdb->insert(
 		$wpdb->prefix . 'dm_agreements', [
-			'user_id' 			=> $user_id,
+			'user_id' 		=> $user_id,
 			'license_id' 		=> $license_id,
 			'license_title' 	=> $license_title,
 			'license_url' 		=> $license_url,
 			'terms_agreed' 		=> $terms_agreed,
-			'username' 			=> $user_displayname,
+			'username' 		=> $user_displayname,
 			'preferred_email' 	=> $iup_email
 		], [
 			'%d', '%d', '%s', '%s', '%s', '%s', '%s'
